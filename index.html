@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<HTML>
+  <HEAD>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.responsivegallery.js"></script>
+    <style>
+      img {transition-delay: 2s;}
+    </style>
+  </HEAD>
+  <BODY>
+    <ul class="gallery">
+      <li><img src="images/Revheim_003.jpg" class="lazy" /></li>
+      <li><img src="images/Revheim_005.jpg" /></li>
+      <li><img src="images/Revheim_006.jpg" /></li>
+      <li><img src="images/Revheim_007.jpg" /></li>
+      <li><img src="images/Revheim_188.jpg" /></li>
+      <li><img src="images/Revheim_020.jpg" /></li>
+      <li><img src="images/Revheim_029.jpg" /></li>
+      <li><img src="images/Revheim_069.jpg" /></li>
+      <li><img src="images/Revheim_083.jpg" /></li>
+      <li><img src="images/Revheim_114.jpg" /></li>
+      <li><img src="images/Revheim_143.jpg" /></li>
+      <li><img src="images/Revheim_158.jpg" /></li>
+      <li><img src="images/Revheim_167.jpg" /></li>
+      <li><img src="images/Revheim_181.jpg" /></li>
+      <li><img src="images/Revheim_182.jpg" /></li>
+      <li><img src="images/Revheim_186.jpg" /></li>
+      <li><img src="images/Revheim_189.jpg" /></li>
+      <li><img src="images/Revheim_194.jpg" /></li>
+      <li><img src="images/Revheim_196.jpg" /></li>
+    </ul>
+    <SCRIPT>
+      jQuery(window).load(function(){
+        $(".gallery").responsiveGallery();
+      //        $(".gallery").responsiveGallery("imagesCompleted");
+      });
+
+    </SCRIPT>
+  </BODY>
+</HTML>
