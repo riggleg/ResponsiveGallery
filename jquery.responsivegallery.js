@@ -51,8 +51,9 @@
 	    var $el = $(plg.element);
 	    $el.css({"list-style-type": "none"});
 	    var images = $el.find("img");
-	    images.css({"position": "absolute", "left": "0px", top: "0px"});
-	    images.css({"-o-transition": "all 2s",
+	    var lis = $el.find("li");
+	    lis.css({"position": "absolute", "left": "0px", top: "0px"});
+	    lis.css({"-o-transition": "all 2s",
 			"-moz-transition": "all 2s",
 			"-webkit-transition": "all 2s",
 			"transition": "all 2s",
@@ -72,17 +73,17 @@
 	repositionImages: function() {
 	    var plg = this;
 	    var $ul = $(plg.element);
-	    var images = $ul.find("img");
+	    var lis = $ul.find("li");
+	    //var images = $ul.find("img");
 
 	    $ul.css({position: "relative"});
 	    var numberOfColumns = Math.floor($ul.width() / plg.settings.imageWidth);
 	    var columnHeights = new Array(numberOfColumns+1).join('0').split('').map(parseFloat);
-	    images.css({position: "absolute"});
-	    $.each(images, function(index, image) {
+	    lis.css({position: "absolute"});
+	    $.each(lis, function(index, li) {
 		var column = columnHeights.indexOf(Math.min.apply(null, columnHeights));
-		var $image = $(image);
-		console.log(plg.settings.imageWidth);
-		console.log($image.data("aspectRatio"));
+		var $li = $(li);
+		var $image = $li.find("img").eq(0);
 		var newCalculatedHeight = Math.floor(plg.settings.imageWidth / $image.data("aspectRatio"));
 		console.log(plg.settings.imageWidth);
 		console.log(newCalculatedHeight);
@@ -90,7 +91,7 @@
 		$image.css({width: plg.settings.imageWidth + "px", height: newCalculatedHeight + "px"});
 		var left = plg.settings.imageWidth * column;
 		var top = columnHeights[column];
-		$image.css({left: left + "px", top: top + "px"});
+		$li.css({left: left + "px", top: top + "px"});
 		columnHeights[column] += newCalculatedHeight;
 	    });
 	    
