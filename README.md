@@ -27,8 +27,11 @@ ResponsiveGallery expects images to be fully loaded before being called.  So, yo
 jQuery(window).load(function(){
   $(".gallery").responsiveGallery();
 });
-
+```
 
 # Options
 
 * imageWidth - This defaults to 300.  This controls the width of each column in the gallery.  The image will be resized proportionally to this width.  Just give a number, no unit (no px).
+
+## License
+ResponsiveGallery is dual-licensed under [MIT](http://www.opensource.org/licenses/mit-license.php) and [GPL-2.0](http://www.gnu.org/licenses/gpl-2.0.html) license.
