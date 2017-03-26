@@ -1,6 +1,10 @@
 # ResponsiveGallery
 
-This is a plugin for responsive tile based galleries.  It was influenced by RTG (Responsive Tile Gallery), I noticed that RTG has issues with multiple galleries on the same page so I made plugin to have the same effect and support multiple galleries.
+This is a plugin for responsive tile based galleries.  It was influenced by RTG (Responsive Tile Gallery), I noticed that RTG has issues with multiple galleries on the same page so I made plugin to have the same effect and support multiple galleries.  This plugin has been written from scratch and shares no code with RTG.
+
+# Demo
+
+You can see a demo at http://riggleg.github.io/ResponsiveGallery/
 
 # Requirements
 JQuery 1.7+ Required
