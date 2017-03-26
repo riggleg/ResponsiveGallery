@@ -42,7 +42,6 @@
 	    // you can add more functions like the one below and
 	    // call them like so: this.yourOtherFunction(this.element, this.settings).
 	    var plg = this;
-	    console.log($(plg.element).find("img"));
 	    this.imagesCompleted();
 	},
 
@@ -67,7 +66,6 @@
 		image.data("aspectRatio", aspectRatio);
 		image.data("origWidth", origWidth);
 		image.data("origHeight", origHeight);
-		console.debug(aspectRatio);
 	    });
 	},
 	repositionImages: function() {
@@ -85,9 +83,6 @@
 		var $li = $(li);
 		var $image = $li.find("img").eq(0);
 		var newCalculatedHeight = Math.floor(plg.settings.imageWidth / $image.data("aspectRatio"));
-		console.log(plg.settings.imageWidth);
-		console.log(newCalculatedHeight);
-		console.log(column);
 		$image.css({width: plg.settings.imageWidth + "px", height: newCalculatedHeight + "px"});
 		var left = plg.settings.imageWidth * column;
 		var top = columnHeights[column];
